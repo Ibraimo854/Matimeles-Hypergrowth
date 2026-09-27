@@ -49,20 +49,12 @@ body{
   overflow:hidden;
   padding-top:80px;
 }
-.hero-photo{
-  position:absolute;inset:0;
-  background-image:url('assets/larson.jpg');
-  background-size:cover;
-  background-position:top center;
-  z-index:0;
-  will-change:opacity, transform;
-  transition:opacity .1s linear;
-}
 .hero-overlay{
   position:absolute;inset:0;z-index:1;
   background:
     radial-gradient(ellipse at 20% 80%, rgba(140,226,61,0.18), transparent 55%),
-    linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.8) 55%, #000 100%);
+    radial-gradient(ellipse at 80% 20%, rgba(140,226,61,0.10), transparent 50%),
+    #000;
 }
 .hero-content{position:relative;z-index:2;text-align:left;max-width:820px;}
 .eyebrow{color:var(--accent);font-weight:700;font-size:.85rem;letter-spacing:.04em;text-transform:uppercase;}
