@@ -1,20 +1,3 @@
-// ===== Efeito: foto do hero desaparece ao rolar, deixando só a cor sólida =====
-const heroPhoto = document.getElementById('heroPhoto');
-const hero = document.getElementById('hero');
-
-function updateHeroFade(){
-  const heroHeight = hero.offsetHeight;
-  const scrolled = window.scrollY;
-  // opacidade cai de 1 a 0 conforme rola a altura do hero
-  const ratio = Math.min(scrolled / heroHeight, 1);
-  const opacity = 1 - ratio;
-  heroPhoto.style.opacity = opacity;
-  // leve zoom/subida para dar sensação de profundidade enquanto desaparece
-  heroPhoto.style.transform = `scale(${1 + ratio * 0.08}) translateY(${ratio * -30}px)`;
-}
-window.addEventListener('scroll', updateHeroFade, { passive:true });
-updateHeroFade();
-
 // ===== Navbar com fundo ao rolar =====
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
