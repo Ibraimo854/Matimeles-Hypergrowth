@@ -1,3 +1,19 @@
+// ===== Animação dos passos da Metodologia ao rolar =====
+const stepItems = document.querySelectorAll('.animate-steps li');
+const stepsObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      stepItems.forEach((item, i) => {
+        setTimeout(() => item.classList.add('visible'), i * 150);
+      });
+      stepsObserver.disconnect(); // anima só uma vez
+    }
+  });
+}, { threshold: 0.3 });
+
+const stepsList = document.querySelector('.animate-steps');
+if(stepsList) stepsObserver.observe(stepsList);
+
 // ===== Navbar com fundo ao rolar =====
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
