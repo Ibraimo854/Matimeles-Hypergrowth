@@ -77,7 +77,7 @@ const FORMSUBMIT_ENDPOINT = "https://formsubmit.co/ajax/seuemail@gmail.com";
 
 // 2) Troque pelo seu número de WhatsApp, com código do país, SEM + nem espaços.
 //    Exemplo Moçambique: "258841234567"
-const WHATSAPP_NUMBER = "258SEUNUMEROAQUI";
+const WHATSAPP_NUMBER = "258858314224";
 
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
